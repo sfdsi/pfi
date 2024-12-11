@@ -1,0 +1,794 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: purple;
+}
+
+/*Début css Index*/
+@media screen and (max-width: 1000px) {
+    main#mainIndex {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "article"
+            "aside";
+    }
+
+    .contenuArticle {
+        margin-bottom: 2em;
+    }
+
+    .contenuAside {
+        margin-top: 1.5em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .conteneurNavTrois {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: white;
+    }
+
+    .conteneurNavTrois>div {
+        width: 30%;
+    }
+
+    div.conteneurNavTrois {
+        width: 600px;
+        align-self: center;
+    }
+
+    div#logo {
+        padding-left: 3em;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    div.conteneurNavTrois {
+        width: 500px;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    div.conteneurNavTrois {
+        background-color: transparent;
+        justify-content: center;
+        width: 450px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    div.conteneurNavTrois {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    div.conteneurNavTrois {
+        width: 250px;
+    }
+
+    img.imageIndex {
+        width: 120px;
+    }
+
+}
+
+@media screen and (max-height: 485px) {
+
+    div.blanc {
+        padding-bottom: 3em;
+        min-height: 485px;
+    }
+
+}
+
+#grille {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+#header {
+    grid-area: header;
+    padding: 0 1em 1em;
+}
+
+#mainIndex {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-areas:
+        "aside article article";
+    gap: 1em;
+    padding: 1em;
+    font-family: 'Raleway', sans-serif;
+}
+
+#aside {
+    grid-area: aside;
+}
+
+#article {
+    grid-area: article;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+#footer,
+#header {
+    background-image: url(../image/Pink\ Watercolor\ Aesthetic\ Phone\ Wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conteneurNavUn {
+    display: flex;
+    height: 100px;
+}
+
+#logo {
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    overflow: visible;
+    margin: 0;
+}
+
+.logo {
+    border-radius: 50%;
+    height: 125%;
+    width: auto;
+    box-shadow: -3px 2px 1px pink;
+}
+
+.conteneurNavDeux {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.pfi {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.conteneurNavTrois {
+    display: flex;
+    height: 50%;
+}
+
+.pfi,
+.conteneurNavTrois {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.lien {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.rose {
+    background-color: rgb(254, 223, 228);
+}
+
+.blanc {
+    background-color: white;
+    border-radius: 20%;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.contenuIndex {
+    padding: 2em;
+}
+
+.imageIndex {
+    border-radius: 50%;
+    float: right;
+    width: 200px;
+}
+
+ul>* {
+    list-style: circle;
+    margin: 0 1em;
+}
+
+ol>* {
+    list-style: square;
+    margin: 0 2em;
+}
+
+/*Fin css Index*/
+
+/*Début css Horaire*/
+@media screen and (max-width: 600px) {
+    #horaire {
+        display: block;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-width: 100%;
+        max-height: 80vh;
+        border: 2px solid pink;
+    }
+
+    #temps {
+        display: block;
+        position: relative;
+    }
+
+    .semaine,
+    #horaire>div {
+        min-width: 150px;
+    }
+
+}
+
+#mainHoraire {
+    grid-area: main;
+    display: grid;
+    padding: 2em 1em 0;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "horaire"
+        "article";
+}
+
+#horaire {
+    grid-area: horaire;
+    display: grid;
+    border-bottom: 2px solid pink;
+    border-right: 2px solid pink;
+    background-image: url(../image/dfyy6gr-61e948ee-2bcb-4249-8e43-463d6859de37.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(2em, auto);
+}
+
+#articleHoraire {
+    grid-area: article;
+    padding: 1em 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.semaine,
+#temps>div {
+    text-align: center;
+    align-self: center;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.semaine {
+    padding: 1em;
+}
+
+#horaire>div {
+    border: 2px solid pink;
+}
+
+.lundi {
+    grid-column: 2/3;
+}
+
+.mardi {
+    grid-column: 3/4;
+}
+
+.mercredi {
+    grid-column: 4/5;
+}
+
+.jeudi {
+    grid-column: 5/6;
+}
+
+.vendredi {
+    grid-column: 6/7;
+}
+
+.lundiMath {
+    grid-row: 2/6;
+}
+
+.mercrediStat {
+    grid-row: 2/8;
+}
+
+.jeudiProg {
+    grid-row: 2/6;
+}
+
+.lundiProg {
+    grid-row: 8/12;
+}
+
+.mardiMath {
+    grid-row: 10/12;
+}
+
+.mardiProg {
+    grid-row: 12/16;
+}
+
+.jeudiMath {
+    grid-row: 12/16;
+}
+
+.vendrediProg {
+    grid-row: 12/16;
+}
+
+.mercrediWeb {
+    grid-row: 18/24;
+}
+
+.vendrediStat {
+    grid-row: 20/24;
+}
+
+#temps {
+    grid-column: 1/2;
+    grid-row: 2/24;
+    display: grid;
+    grid-template-rows: repeat(22, 1fr);
+}
+
+.bleu {
+    background-color: lightblue;
+}
+
+.mauve {
+    background-color: rgb(206, 158, 250);
+}
+
+.coral {
+    background-color: lightpink;
+}
+
+.orange {
+    background-color: rgba(250, 142, 103);
+}
+
+.imgProg {
+    float: right;
+    width: 125px;
+    height: auto;
+}
+
+.imgHtml {
+    float: left;
+    width: 175px;
+    height: auto;
+}
+
+.imgHtml,
+.imgProg {
+    padding: 1em;
+}
+
+.titreHoraire {
+    padding-top: 1em;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/*Fin css Horaire*/
+
+/*Début css Professions*/
+#grilleProf {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(6, auto);
+    padding: 1em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.titreProf {
+    text-align: center;
+}
+
+#grilleProf div:nth-child(even),
+#grilleProf h3:nth-child(odd) {
+    background-color: rgb(255, 224, 229);
+}
+
+#grilleProf div:last-child,
+h4 {
+    background-color: white;
+}
+
+.titreProf {
+    padding: 1em;
+}
+
+.prof,
+#sourceProf,
+.desc {
+    padding: 1em;
+}
+
+.prof {
+    grid-column: 1/2;
+
+}
+
+.prof1 {
+    grid-row: 1/2;
+}
+
+.prof2 {
+    grid-row: 2/3;
+}
+
+.prof3 {
+    grid-row: 3/4;
+}
+
+.prof4 {
+    grid-row: 4/5;
+}
+
+.prof5 {
+    grid-row: 5/6;
+}
+
+.desc {
+    grid-column: 2/3;
+}
+
+.desc1 {
+    grid-row: 1/2;
+}
+
+.desc2 {
+    grid-row: 2/3;
+}
+
+.desc3 {
+    grid-row: 3/4;
+}
+
+.desc4 {
+    grid-row: 4/5;
+}
+
+.desc5 {
+    grid-row: 5/6;
+}
+
+#sourceProf {
+    grid-column: 1/3;
+    grid-row: 6/7;
+    text-align: right;
+}
+
+/*Fin css Professions*/
+
+/*Début css Sujet*/
+.imgCOD {
+    float: left;
+    width: 250px;
+    padding: 0em 2em 1em 1em;
+}
+
+.imgCF {
+    width: 250px;
+    float: right;
+    padding: 0 1em 1em;
+}
+
+.sectionCF {
+    padding-top: 2em;
+}
+
+/*Fin css Sujet*/
+
+/*Début css Galerie*/
+@media screen and (max-width: 900px) {
+    .contenantAvatar {
+        padding: 15px;
+    }
+
+    .sectionJeux {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .titreSection {
+        width: 95%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .grilleAvatar {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .carteAvatar {
+        width: 180px;
+    }
+
+    .carteAvatar img {
+        height: 160px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    div.nomJeux {
+        background-color: white;
+        padding: 0 5em;
+        margin-bottom: 1em;
+        text-align: center;
+        border: 2px solid pink;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #mainGalerie {
+        padding: 10px;
+    }
+
+    .contenantAvatar {
+        padding: 10px;
+    }
+
+    .titreSection {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    .nomJeux {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+
+    .grilleAvatar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .carteAvatar {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .carteAvatar .description {
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .contenantAvatar {
+        padding: 8px;
+    }
+
+    .carteAvatar {
+        max-width: 240px;
+    }
+
+    .titreSection {
+        font-size: 1.5em;
+    }
+}
+
+main#mainGalerie {
+    box-sizing: border-box;
+}
+
+#mainGalerie {
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+}
+
+.contenantAvatar {
+    max-width: 1200px;
+    margin: 0 auto 3em;
+    border: 2px solid pink;
+    padding: 20px;
+    background-image: url(../image/Beige\ and\ Pink\ Minimalist\ Watercolor\ Phone\ Wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titreGalerie {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.titreSection {
+    text-align: center;
+    margin-bottom: 1em;
+    background-color: white;
+    padding: 0.5em;
+    border: 2px solid pink;
+}
+
+.sectionJeux {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.nomJeux {
+    width: 200px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 901px) {
+    div.nomJeux {
+        background-color: white;
+        padding: 4em 0;
+        text-align: center;
+        border: 2px solid pink;
+    }
+
+}
+
+.grilleAvatar {
+    display: flex;
+    flex-grow: 1;
+    gap: 20px;
+    justify-content: center;
+}
+
+.carteAvatar {
+    width: 200px;
+    border: 3px solid pink;
+    padding: 10px;
+    text-align: center;
+}
+
+.carteAvatar:hover {
+    box-shadow: -3px 2px 1px pink;
+}
+
+.carteAvatar img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.carteAvatar .description {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/*Fin css Galerie*/
+
+/*Début css KB2 Plus*/
+.déroulant {
+    position: relative;
+}
+
+.contenuDéroulant {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px pink;
+    z-index: 1;
+    width: 100%;
+}
+
+.contenuDéroulant a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.déroulant:hover .contenuDéroulant {
+    display: block;
+}
+
+.lien:hover,
+.contenuDéroulant a:hover {
+    background-color: pink;
+    color: purple;
+}
+
+/*Fin css KB2 Plus*/
+
+/*Début css Sources*/
+#mainSource {
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.titreSource {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.contenantSource {
+    display: grid;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imgSource {
+    border: 2px solid pink;
+    padding: 15px;
+    text-align: center;
+}
+
+.imgSource:hover {
+    box-shadow: -3px 2px 1px pink;
+}
+
+.imgSource img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.imgSource h2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/*Fin css Sources*/
+#footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
